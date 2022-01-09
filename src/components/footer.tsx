@@ -1,6 +1,5 @@
 import { FunctionComponent } from "react";
-import github from "../images/social/github.png";
-import twitter from "../images/social/twitter.png";
+import { FaTwitterSquare, FaGithubSquare } from "react-icons/fa";
 
 interface FooterProps {
     
@@ -9,10 +8,8 @@ interface FooterProps {
 const Footer: FunctionComponent<FooterProps> = () => {
     return (
         <div className="footer">
-            <ul>
-                <li><img src={ github } className="social-logo"/></li>
-                <li><img src={ twitter } className="social-logo"/></li>
-            </ul>
+            <a href="https://github.com/Nithsua" className="social-logo"> <FaGithubSquare size="40px" color="white"/> </a>
+            <a href="https://twitter.com/nithsua" className="social-logo"> <FaTwitterSquare size="40px" color="white"/> </a>
         </div>
     );
 }

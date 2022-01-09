@@ -1,7 +1,10 @@
 import { FunctionComponent } from "react";
+import { FiMail } from "react-icons/fi";
 
-interface MainContentProps {
-    
+interface MainContentProps {}
+
+const mailTo = () => {
+    window.location.href = 'mailto:nivasmuthu452@gmail.com';
 }
  
 const MainContent: FunctionComponent<MainContentProps> = () => {
@@ -10,11 +13,12 @@ const MainContent: FunctionComponent<MainContentProps> = () => {
             <div className="main--title">
                 <h1>Nithsua</h1>
                 <h5>FullStack Developer</h5>
-                <a href="https://nithsua.live">nithsua.live</a>
-                <div className="social">
-                    <input type="button" value="Twitter"/>
-                    <input type="button" value="E Mail"/>
-                </div>
+                <a href="https://nithsua.live" className="main--link">nithsua.live</a>
+                <br />
+                <button className="email-button" onClick={mailTo}>
+                    <FiMail size="24px" style={{ paddingRight: "10px" }}/>
+                    Email
+                </button>
             </div>
             <div className="main--content">
                 <h4>About</h4>
